@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RandomNameSettings generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>RandomNameSettings generator</h1>
+    
+    <form id="nameForm">
+        <div class="checkboxes">
+            <label>
+                <input type="checkbox" id="customNamesEnabled" checked>
+                customNamesEnabled
+            </label>
+            <label>
+                <input type="checkbox" id="alsoIncludeDefaultNames">
+                alsoIncludeDefaultNames
+            </label>
+        </div>
+
+        <div class="textareas">
+            <div class="textarea-group">
+                <label for="firstNames">firstNames</label><br>
+                <textarea id="firstNames" rows="20"></textarea>
+            </div>
+            <div class="textarea-group">
+                <label for="lastNames">lastNames</label><br>
+                <textarea id="lastNames" rows="20"></textarea>
+            </div>
+            <div class="textarea-group">
+                <label for="fullNames">fullNames</label><br>
+                <textarea id="fullNames" rows="20"></textarea>
+            </div>
+        </div>
+
+        <br>
+        <button type="button" onclick="generate()">Download</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
