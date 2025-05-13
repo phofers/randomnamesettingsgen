@@ -4,17 +4,14 @@ function generate() {
 
     const firstNames = document.getElementById('firstNames').value
         .split('\n')
-        .map(name => name.trim())
         .filter(name => name !== "");
 
     const lastNames = document.getElementById('lastNames').value
         .split('\n')
-        .map(name => name.trim())
         .filter(name => name !== "");
 
     const fullNames = document.getElementById('fullNames').value
         .split('\n')
-        .map(name => name.trim())
         .filter(name => name !== "");
 
     const jsonData = {
