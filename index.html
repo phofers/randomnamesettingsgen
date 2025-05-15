@@ -12,31 +12,46 @@
         <div class="checkboxes">
             <label>
                 <input type="checkbox" id="customNamesEnabled" checked>
-                customNamesEnabled
+                Custom names enabled
             </label>
             <label>
                 <input type="checkbox" id="alsoIncludeDefaultNames">
-                alsoIncludeDefaultNames
+                Also include default names
             </label>
         </div>
 
         <div class="textareas">
             <div class="textarea-group">
-                <label for="firstNames">firstNames</label><br>
+                <label for="firstNames">First names</label><br>
                 <textarea id="firstNames" rows="20"></textarea>
             </div>
             <div class="textarea-group">
-                <label for="lastNames">lastNames</label><br>
+                <label for="lastNames">Last names</label><br>
                 <textarea id="lastNames" rows="20"></textarea>
             </div>
             <div class="textarea-group">
-                <label for="fullNames">fullNames</label><br>
+                <label for="fullNames">Full names</label><br>
                 <textarea id="fullNames" rows="20"></textarea>
             </div>
+            <div class="textarea-group">
+                <label for="allianceNames">Alliance names 
+                    <span class="tooltip-container">
+                        <span class="tooltip-icon">&#9432;</span>
+                        <span class="tooltip-text">Use '&#123;0&#125;' in alliance names to include either the nation name or a city name.</span>
+                    </span>
+                </label>
+                <textarea id="allianceNames" rows="20"></textarea>
+            </div>
+
         </div>
 
         <br>
+        <span>
+        <input type="file" id="jsonFileInput" accept=".json" style="display: none;">
+
+        <button type="button" onclick="pickFile()">Upload your own RandomNameSettings to edit</button>
         <button type="button" onclick="generate()">Generate</button>
+        
     </form>
 
     <script src="script.js"></script>
