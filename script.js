@@ -1,22 +1,21 @@
 function pickFile() {
-    document.getElementById('jsonFileInput').click(); // Open the file picker
+    document.getElementById('jsonFileInput').click();
 }
 
-// Correct event listener for the file input
 document.getElementById('jsonFileInput').addEventListener('change', function(event) {
     const file = event.target.files[0];
-    if (!file) return; // Exit if no file is selected
+    if (!file) return;
 
     const reader = new FileReader();
     reader.onload = function(e) {
         try {
             const json = JSON.parse(e.target.result);
-            populate(json); // Populate the form with the selected JSON data
+            populate(json); 
         } catch (err) {
             alert('Invalid JSON file.');
         }
     };
-    reader.readAsText(file); // Read the file as text
+    reader.readAsText(file);
 });
 
 function populate(json) {
